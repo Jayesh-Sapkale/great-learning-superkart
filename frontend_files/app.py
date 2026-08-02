@@ -3,9 +3,8 @@ import streamlit as st
 import requests
 import pandas as pd
 
-# Set this to your backend's public URL (Hugging Face Space URL or Codespace forwarded URL).
-# It can also be provided as an environment variable named BACKEND_URL when running the container,
-# e.g. `docker run -e BACKEND_URL=https://your-username-superkart-backend.hf.space ...`
+# Backend URL - set as an environment variable / platform secret at deploy time.
+# Deployed value used for this project: https://great-learning-superkart.onrender.com
 BACKEND_URL = os.environ.get("BACKEND_URL", "http://backend:7860")
 
 st.title("SuperKart — Sales Revenue Predictor")
